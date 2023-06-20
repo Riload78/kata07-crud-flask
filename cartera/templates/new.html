@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav><a href="/"></a></nav>
+    <main>
+        <form action="/new-movement" method="post">
+            <label for="date">Introduce la entradas</label>
+            <input type="date" name="date" id="date">
+            <label label="abstract">Introduce la concepto</label>
+            <input type="text" name="abstract">
+            <label for="amount">Introduce el importe</label>
+            <input type="number" name="amount" step="0.01">
+            <label for="currency">Introduce el moneda</label>
+            <select name="currency" id="currency">
+                <option value="EUR">Euros</option>
+                <option value="USD">Dólares</option>
+            </select>
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>

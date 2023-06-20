@@ -1,2 +1,0 @@
-1/1/2023,"Sueldo",1,EUR
-05/01/2023,"Mi pandereta",-20,EUR              
