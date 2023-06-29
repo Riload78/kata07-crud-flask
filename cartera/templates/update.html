@@ -3,7 +3,7 @@
 {% block content %}
     <h1> Nueva entrada  </h1>
     <main>
-        <form action="/new_movement" method="post">
+        <form action="/update_movement/{{pos}}" method="post">
             <label for="date">Introduce la entradas</label>
             <input type="date" name="date" id="date" value={{the_form.date}}>
             <label label="abstract">Introduce la concepto</label>

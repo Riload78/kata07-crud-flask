@@ -1,13 +1,5 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Cartera - Todos</title>
-</head>
-
-<body>
-    <nav><a href="/new-movement">Nuevo</a></nav>
+{% extends 'base.html' %}
+{% block content %}
     <main>
         <h1>Mis movimientos</h1>
         <table>
@@ -16,18 +8,16 @@
                 <th>Concepto</th>
                 <th>Importe</th>
             </tr>
-            {% for movement in mvm %}
+            {% for movement in the_movements %}
 
             <tr>
-                <td>{{ movement.date  }}</td>
+                <td>{{ movement.date }}</td>
                 <td>{{ movement.abstract }}</td>
                 <td>{{ movement.amount }} {{ movement.currency }}</td>
+                <td><a href="/update_movement/{{ loop.index0 }}">Editar</a></td>
             </tr>
             {% endfor %}
 
         </table>
     </main>
-
-</body>
-
-</html>
+{% endblock %}

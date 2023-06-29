@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/pico.css')}}"">
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li>
+                <a href="/">Index</a>
+            </li>
+            <li>
+                <a href="/new_movement" role="button">Nuevo</a>
+            </li>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}   
+    <main class="container">
+        
+      {% block content%} {% endblock %}
+       
+       
+    </main>
+</body>
+</html>
